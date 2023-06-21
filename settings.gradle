@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 rootProject.name = "StarProfileComposeApp"
 include ':app'
 include ':core:network'
+include ':core:data'
