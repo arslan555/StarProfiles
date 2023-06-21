@@ -1,4 +1,4 @@
-package com.arslan.starprofilecomposeapp
+package com.network.starprofilecomposeapp
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.arslan.starprofilecomposeapp.ui.theme.StarProfileComposeAppTheme
+import com.network.starprofilecomposeapp.ui.theme.StarProfileComposeAppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

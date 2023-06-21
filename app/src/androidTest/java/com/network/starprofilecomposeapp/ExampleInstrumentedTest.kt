@@ -1,4 +1,4 @@
-package com.saver.status.network
+package com.network.starprofilecomposeapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.saver.status.network.test", appContext.packageName)
+        assertEquals("com.arslan.starprofilecomposeapp", appContext.packageName)
     }
 }

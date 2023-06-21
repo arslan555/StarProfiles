@@ -1,4 +1,4 @@
-package com.arslan.starprofilecomposeapp.ui.theme
+package com.network.starprofilecomposeapp.ui.theme
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme

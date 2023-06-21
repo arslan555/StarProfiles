@@ -1,4 +1,4 @@
-package com.saver.status.network
+package com.network.starprofilecomposeapp
 
 import org.junit.Test
 

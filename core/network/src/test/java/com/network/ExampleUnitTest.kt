@@ -1,4 +1,4 @@
-package com.arslan.starprofilecomposeapp
+package com.network
 
 import org.junit.Test
 
