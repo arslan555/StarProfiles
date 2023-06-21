@@ -1,4 +1,4 @@
-package com.network.starprofilecomposeapp.ui.theme
+package com.starprofilecomposeapp.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
