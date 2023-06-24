@@ -1,4 +1,4 @@
-package com.saver.status.common
+package com.core.common
 
 import org.junit.Test
 

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.core.data'
+    namespace 'com.core.model'
     compileSdk 33
 
     defaultConfig {
