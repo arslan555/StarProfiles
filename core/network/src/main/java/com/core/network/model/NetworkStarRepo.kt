@@ -1,10 +1,17 @@
 package com.core.network.model
 
+import kotlinx.serialization.Serializable
+
+/**
+ *Network representation of StarRepo
+ **/
+@Serializable
 data class NetworkStarRepo(
     val total_count: Int? = null,
     val incomplete_results: Boolean? = null,
     val items: List<Item?>? = null
 ) {
+    @Serializable
     data class Item(
         val id: Int? = null,
         val node_id: String? = null,
@@ -71,7 +78,7 @@ data class NetworkStarRepo(
         val has_pages: Boolean? = null,
         val has_discussions: Boolean? = null,
         val forks_count: Int? = null,
-        val mirror_url: Any? = null,
+        val mirror_url: String? = null,
         val archived: Boolean? = null,
         val disabled: Boolean? = null,
         val open_issues_count: Int? = null,
@@ -87,6 +94,7 @@ data class NetworkStarRepo(
         val default_branch: String? = null,
         val score: Double? = null
     ) {
+        @Serializable
         data class Owner(
             val login: String? = null,
             val id: Int? = null,
@@ -108,6 +116,7 @@ data class NetworkStarRepo(
             val site_admin: Boolean? = null
         )
 
+        @Serializable
         data class License(
             val key: String? = null,
             val name: String? = null,

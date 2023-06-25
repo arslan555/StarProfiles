@@ -25,10 +25,10 @@ class FakeReposNetworkDataSourceTest {
     @Test
     fun testDeserializationOfRepos()  = runTest(testDispatchers) {
         assertNotNull( subject.getStarRepos())
-        assertEquals(FakeDataSource.sampleRepos.items?.size, 2)
-        assertEquals(FakeDataSource.sampleRepos.total_count, 3558)
-        assertEquals(FakeDataSource.sampleRepos.items?.get(0)?.name, "kotlin")
-        assertEquals(FakeDataSource.sampleRepos.items?.get(1)?.topics?.get(5), "programming-language")
+        assertEquals(FakeDataSource.sampleRepos.items?.size, subject.getStarRepos().items?.size)
+        assertEquals(FakeDataSource.sampleRepos.total_count, subject.getStarRepos().total_count)
+        assertEquals(FakeDataSource.sampleRepos.items?.get(0)?.name, subject.getStarRepos().items?.get(0)?.name)
+        assertEquals(FakeDataSource.sampleRepos.items?.get(1)?.topics?.get(5), subject.getStarRepos().items?.get(0)?.topics?.get(5))
     }
 
 
