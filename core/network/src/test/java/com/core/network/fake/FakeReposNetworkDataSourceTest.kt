@@ -29,6 +29,11 @@ class FakeReposNetworkDataSourceTest {
         assertEquals(FakeDataSource.sampleRepos.total_count, subject.getStarRepos().total_count)
         assertEquals(FakeDataSource.sampleRepos.items?.get(0)?.name, subject.getStarRepos().items?.get(0)?.name)
         assertEquals(FakeDataSource.sampleRepos.items?.get(1)?.topics?.get(5), subject.getStarRepos().items?.get(0)?.topics?.get(5))
+        assertNotNull(FakeDataSource.sampleRepos.items?.get(0)?.license?.key, subject.getStarRepos().items?.get(0)?.license?.key)
+        assertNotNull(FakeDataSource.sampleRepos.items?.get(0)?.license?.name, subject.getStarRepos().items?.get(0)?.license?.name)
+        assertNotNull(FakeDataSource.sampleRepos.items?.get(0)?.license?.node_id, subject.getStarRepos().items?.get(0)?.license?.node_id)
+        assertNotNull(FakeDataSource.sampleRepos.items?.get(0)?.license?.url, subject.getStarRepos().items?.get(0)?.license?.url)
+        assertNotNull(FakeDataSource.sampleRepos.items?.get(0)?.license?.spdx_id, subject.getStarRepos().items?.get(0)?.license?.spdx_id)
     }
 
 

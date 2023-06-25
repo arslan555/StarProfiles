@@ -82,6 +82,7 @@ data class NetworkStarRepo(
         val archived: Boolean? = null,
         val disabled: Boolean? = null,
         val open_issues_count: Int? = null,
+        @Serializable
         val license: License? = null,
         val allow_forking: Boolean? = null,
         val is_template: Boolean? = null,
