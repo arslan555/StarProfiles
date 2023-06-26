@@ -5,5 +5,15 @@ import com.core.network.model.NetworkStarRepo
 
 
 fun NetworkStarRepo.Item.asEntity() = StarRepos(
- TODO()
+    id = id,
+    name = name,
+    fullName = full_name,
+    description = description,
+    starsCount = stargazers_count,
+    language = language,
+    StarRepos.Owner(
+        id = owner?.id,
+        avatarUrl = owner?.avatar_url,
+        htmlUrl = owner?.html_url
+    )
 )
