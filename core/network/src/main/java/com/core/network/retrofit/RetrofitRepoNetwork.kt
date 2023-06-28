@@ -3,7 +3,6 @@ package com.core.network.retrofit
 import com.core.network.ReposNetworkDataSource
 import com.core.network.model.NetworkStarRepo
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
@@ -21,19 +20,12 @@ private interface RetrofitRepoNetworkApi {
 
     @GET(value = "search/repositories")
     suspend fun getStarRepos(
-        @Query("q") language: String? = "language=kotlin+sort:stars",
-    ): NetworkResponse<NetworkStarRepo>
+        @Query("q") language: String?,
+    ): NetworkStarRepo
 
 }
 
 private const val RepoBaseUrl = "https://api.github.com/"
-/**
- * Wrapper for data provided from the [RepoBaseUrl]
- */
-@Serializable
-private data class NetworkResponse<T>(
-    val data: T
-)
 
 /**
  * [Retrofit] backed [ReposNetworkDataSource]
@@ -59,7 +51,7 @@ class RetrofitRepoNetwork @Inject constructor(
         .create(RetrofitRepoNetworkApi::class.java)
 
     override suspend fun getStarRepos(language: String?): NetworkStarRepo  =
-        networkApi.getStarRepos(language = language).data
+        networkApi.getStarRepos(language)
 
 }
 

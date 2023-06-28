@@ -17,7 +17,7 @@ class StarReposRepositoryImpl @Inject constructor(
 ): StarReposRepository {
     override fun getStarReposStream(): Flow<List<StarRepos>> =
         flow {
-            val networkStarRepo: NetworkStarRepo = network.getStarRepos()
+            val networkStarRepo: NetworkStarRepo = network.getStarRepos("kotlin=+sort:stars")
             val starRepose = arrayListOf<StarRepos>()
             networkStarRepo.items?.forEach { repos ->
                 repos?.asEntity()?.let { starRepose.add(it) }
