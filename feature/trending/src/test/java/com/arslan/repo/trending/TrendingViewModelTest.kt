@@ -4,9 +4,11 @@ import com.arslan.repo.trending.repository.TestStarReposRepository
 import com.core.model.data.StarRepos
 import com.core.testing.util.MainDispatcherRule
 import io.mockk.MockKAnnotations
-import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
-import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.*
 
@@ -24,8 +26,8 @@ class TrendingViewModelTest {
 
     @Before
     fun setUp() {
-        MockKAnnotations.init()
         starReposRepository = TestStarReposRepository()
+        MockKAnnotations.init()
         viewModel = TrendingViewModel(starReposRepository)
     }
 
@@ -34,10 +36,11 @@ class TrendingViewModelTest {
         assertEquals(TrendingUiState.Loading, viewModel.trendingUiState.value)
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
     fun uiStateTrendingRepos_WhenUpdatingFromRepository_ThenShowTrendingSuccess() = runTest {
-        coEvery { starReposRepository.getStarReposStream() }
-            .returns(flowOf(getStarRepos()))
+        val collectJob = launch(UnconfinedTestDispatcher()) {viewModel.trendingUiState.collect()  }
+        starReposRepository.sendStarRepos(testInputstarRepos)
         val state = viewModel.trendingUiState.value
         assertTrue(state is TrendingUiState.Success)
         val successState: TrendingUiState.Success = viewModel.trendingUiState.value as TrendingUiState.Success
@@ -45,12 +48,12 @@ class TrendingViewModelTest {
         assertEquals(successState.starRepos.size, 2)
         assertEquals(successState.starRepos[0].name, "Kotlin")
         assertEquals(successState.starRepos[1].owner?.avatarUrl,"https://avatars.githubusercontent.com/u/878437?v=4")
-
+        collectJob.cancel()
     }
 
 
 
-    private fun getStarRepos() = listOf(
+    private val testInputstarRepos = listOf(
         StarRepos(
             id = 0,
             name = "Kotlin",

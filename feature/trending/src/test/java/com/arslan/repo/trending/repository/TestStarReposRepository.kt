@@ -10,4 +10,11 @@ class TestStarReposRepository: StarReposRepository {
     private val starReposFlow: MutableSharedFlow<List<StarRepos>> =
         MutableSharedFlow(replay = 1, onBufferOverflow = BufferOverflow.DROP_OLDEST)
     override fun getStarReposStream(): Flow<List<StarRepos>> = starReposFlow
+
+    /**
+     * A test-only API to allow controlling the list of authors from tests.
+     */
+    fun sendStarRepos(authors: List<StarRepos>) {
+        starReposFlow.tryEmit(authors)
+    }
 }
