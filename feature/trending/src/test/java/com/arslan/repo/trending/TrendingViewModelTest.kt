@@ -47,6 +47,16 @@ class TrendingViewModelTest {
         collectJob.cancel()
     }
 
+    @OptIn(ExperimentalCoroutinesApi::class)
+    @Test
+    fun uiStateTrendingRepos_WhenUpdatingFromRepository_ThenShowTrendingEmpty() = runTest {
+        val collectJob = launch(UnconfinedTestDispatcher()) {viewModel.trendingUiState.collect() }
+        starReposRepository.sendStarRepos(listOf())
+        val state = viewModel.trendingUiState.value
+        assertTrue(state is TrendingUiState.Empty)
+        collectJob.cancel()
+    }
+
 
 
 

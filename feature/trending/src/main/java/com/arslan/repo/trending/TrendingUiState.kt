@@ -6,4 +6,5 @@ sealed interface TrendingUiState {
     data class Success(val starRepos: List<StarRepos>) : TrendingUiState
     object Error : TrendingUiState
     object Loading : TrendingUiState
+    object Empty: TrendingUiState
 }
