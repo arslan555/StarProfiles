@@ -14,7 +14,7 @@ class TestStarReposRepository: StarReposRepository {
     /**
      * A test-only API to allow controlling the list of authors from tests.
      */
-    fun sendStarRepos(authors: List<StarRepos>) {
-        starReposFlow.tryEmit(authors)
+    fun sendStarRepos(starRepos: List<StarRepos>) {
+        starReposFlow.tryEmit(starRepos)
     }
 }

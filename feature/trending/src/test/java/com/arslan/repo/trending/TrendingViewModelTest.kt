@@ -3,8 +3,6 @@ package com.arslan.repo.trending
 import com.arslan.repo.trending.repository.TestStarReposRepository
 import com.core.model.data.StarRepos
 import com.core.testing.util.MainDispatcherRule
-import io.mockk.MockKAnnotations
-import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
@@ -20,14 +18,12 @@ class TrendingViewModelTest {
     @get:Rule
     val dispatcherRule = MainDispatcherRule()
 
-    @MockK
     private lateinit var starReposRepository: TestStarReposRepository
     private lateinit var viewModel: TrendingViewModel
 
     @Before
     fun setUp() {
         starReposRepository = TestStarReposRepository()
-        MockKAnnotations.init()
         viewModel = TrendingViewModel(starReposRepository)
     }
 
@@ -38,9 +34,9 @@ class TrendingViewModelTest {
 
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
-    fun uiStateTrendingRepos_WhenUpdatingFromRepository_ThenShowTrendingSuccess() = runTest {
+    fun uiStateTrendingRepos_WhenUpdatingSuccessFromRepository_ThenShowTrendingSuccess() = runTest {
         val collectJob = launch(UnconfinedTestDispatcher()) {viewModel.trendingUiState.collect()  }
-        starReposRepository.sendStarRepos(testInputstarRepos)
+        starReposRepository.sendStarRepos(testInputStarRepos)
         val state = viewModel.trendingUiState.value
         assertTrue(state is TrendingUiState.Success)
         val successState: TrendingUiState.Success = viewModel.trendingUiState.value as TrendingUiState.Success
@@ -53,7 +49,8 @@ class TrendingViewModelTest {
 
 
 
-    private val testInputstarRepos = listOf(
+
+    private val testInputStarRepos = listOf(
         StarRepos(
             id = 0,
             name = "Kotlin",

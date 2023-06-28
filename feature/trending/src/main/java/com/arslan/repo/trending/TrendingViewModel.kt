@@ -32,7 +32,7 @@ class TrendingViewModel @Inject constructor(
                     is Result.Loading -> {
                         TrendingUiState.Loading
                     }
-                   else -> {
+                    is Result.Error -> {
                         TrendingUiState.Error
                     }
                 }
