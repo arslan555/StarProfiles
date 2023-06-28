@@ -12,7 +12,7 @@ class TestStarReposRepository: StarReposRepository {
     override fun getStarReposStream(): Flow<List<StarRepos>> = starReposFlow
 
     /**
-     * A test-only API to allow controlling the list of authors from tests.
+     * A test-only API to allow controlling the list of starRepos from tests.
      */
     fun sendStarRepos(starRepos: List<StarRepos>) {
         starReposFlow.tryEmit(starRepos)

@@ -27,7 +27,8 @@ class TrendingViewModel @Inject constructor(
             .map { starReposResult ->
                 when (starReposResult) {
                     is Result.Success -> {
-                        TrendingUiState.Success(starRepos = starReposResult.data)
+                        if (starReposResult.data.isNullOrEmpty()) TrendingUiState.Empty
+                        else TrendingUiState.Success(starRepos = starReposResult.data!!)
                     }
                     is Result.Loading -> {
                         TrendingUiState.Loading
