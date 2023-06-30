@@ -51,7 +51,7 @@ fun LoadingShimmerEffect(): Brush {
 @Composable
 fun ShimmerGridItem(brush: Brush = LoadingShimmerEffect()) {
     Row(modifier = Modifier
-        .fillMaxSize()
+        .fillMaxWidth()
         .padding(all = 10.dp), verticalAlignment = Alignment.Top) {
 
         Spacer(modifier = Modifier
@@ -81,7 +81,7 @@ fun ShimmerGridItem(brush: Brush = LoadingShimmerEffect()) {
 
 @Composable
 fun ShimmerLayout(times: Int = 15) {
-    Column {
+    Column( modifier = Modifier.fillMaxSize()) {
         repeat(times) {
             ShimmerGridItem()
         }
