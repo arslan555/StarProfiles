@@ -45,10 +45,6 @@ fun ErrorScreen(onRetry: () -> Unit) {
                     .height(40.dp)
                     .padding(20.dp, 0.dp),
                     border = BorderStroke(1.dp, MaterialTheme.colors.primary)
-
-
-
-
             ) {
                 Text(text = "RETRY", style = MaterialTheme.typography.button)
             }
