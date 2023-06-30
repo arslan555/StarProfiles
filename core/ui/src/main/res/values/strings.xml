@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="something_went_wrong">Something went wrong..</string>
+    <string name="blocking_signal">An Alien is probably blocking your signal.</string>
+    <string name="retry">RETRY</string>
+</resources>
