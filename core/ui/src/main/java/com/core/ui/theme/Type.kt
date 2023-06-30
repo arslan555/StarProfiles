@@ -1,4 +1,4 @@
-package com.starprofilecomposeapp.ui.theme
+package com.core.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

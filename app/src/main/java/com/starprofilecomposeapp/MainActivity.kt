@@ -11,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.arslan.repo.trending.TrendingRoute
-import com.starprofilecomposeapp.ui.theme.StarProfileComposeAppTheme
+import com.core.ui.theme.StarProfileComposeAppTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
