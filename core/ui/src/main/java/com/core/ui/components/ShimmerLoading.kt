@@ -50,32 +50,42 @@ fun LoadingShimmerEffect(): Brush {
 
 @Composable
 fun ShimmerGridItem(brush: Brush = LoadingShimmerEffect()) {
-    Row(modifier = Modifier
-        .fillMaxWidth()
-        .padding(all = 10.dp), verticalAlignment = Alignment.Top) {
+    Column(modifier = Modifier
+        .fillMaxWidth()) {
+        Row(modifier = Modifier
+            .fillMaxWidth()
+            .padding(all = 10.dp), verticalAlignment = Alignment.Top) {
 
+            Spacer(modifier = Modifier
+                .size(50.dp)
+                .clip(RoundedCornerShape(50.dp))
+                .background(brush)
+            )
+            Spacer(modifier = Modifier.width(10.dp))
+            Column(verticalArrangement = Arrangement.Center) {
+                Spacer(modifier = Modifier
+                    .height(15.dp)
+                    .clip(RoundedCornerShape(7.dp))
+                    .fillMaxWidth(fraction = 0.5f)
+                    .background(brush)
+                )
+
+                Spacer(modifier = Modifier.height(15.dp)) //creates an empty space between
+                Spacer(modifier = Modifier
+                    .height(15.dp)
+                    .clip(RoundedCornerShape(7.dp))
+                    .fillMaxWidth(fraction = 0.7f)
+                    .background(brush)
+                )
+            }
+        }
+        Spacer(modifier = Modifier.height(15.dp))
         Spacer(modifier = Modifier
-            .size(50.dp)
-            .clip(RoundedCornerShape(50.dp))
+            .height(2.dp)
+            .fillMaxWidth()
+            .padding(start = 10.dp)
             .background(brush)
         )
-        Spacer(modifier = Modifier.width(10.dp))
-        Column(verticalArrangement = Arrangement.Center) {
-            Spacer(modifier = Modifier
-                .height(15.dp)
-                .clip(RoundedCornerShape(10.dp))
-                .fillMaxWidth(fraction = 0.5f)
-                .background(brush)
-            )
-
-            Spacer(modifier = Modifier.height(15.dp)) //creates an empty space between
-            Spacer(modifier = Modifier
-                .height(15.dp)
-                .clip(RoundedCornerShape(10.dp))
-                .fillMaxWidth(fraction = 0.7f)
-                .background(brush)
-            )
-        }
     }
 }
 
