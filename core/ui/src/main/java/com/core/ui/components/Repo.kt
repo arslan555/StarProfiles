@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Person
+import androidx.compose.material.icons.rounded.Person
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -37,9 +37,10 @@ fun Repo(
             if (repo.owner?.avatarUrl.isNullOrEmpty()) {
                 Icon(
                     modifier = modifier
-                        .background(androidx.compose.material3.MaterialTheme.colorScheme.surface)
+                        .size(50.dp)
+                        .background(Color.LightGray.copy(alpha = 0.3f))
                         .padding(4.dp),
-                    imageVector = Icons.Default.Person,
+                    imageVector = Icons.Rounded.Person,
                     contentDescription = null,
                 )
             } else {
