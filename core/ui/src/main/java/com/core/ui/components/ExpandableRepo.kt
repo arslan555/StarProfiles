@@ -39,7 +39,7 @@ fun ExpandableRepo(modifier: Modifier, starRepo: StarRepos) {
                     easing = LinearOutSlowInEasing
                 )
             )
-            .padding(16.dp)
+            .padding(start = 16.dp, end = 16.dp, top = 16.dp)
             .noRippleClickable {
                 expanded = !expanded
             }
@@ -51,7 +51,7 @@ fun ExpandableRepo(modifier: Modifier, starRepo: StarRepos) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(all = 10.dp), verticalAlignment = Alignment.Top
+                    .padding(top = 10.dp, start = 10.dp, end = 10.dp), verticalAlignment = Alignment.Top
             ) {
                 if (starRepo.owner?.avatarUrl.isNullOrEmpty()) {
                     Icon(
