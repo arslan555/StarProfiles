@@ -54,7 +54,7 @@ fun ShimmerGridItem(brush: Brush = LoadingShimmerEffect()) {
         .fillMaxWidth()) {
         Row(modifier = Modifier
             .fillMaxWidth()
-            .padding(all = 10.dp), verticalAlignment = Alignment.Top) {
+            .padding(all = 16.dp), verticalAlignment = Alignment.Top) {
 
             Spacer(modifier = Modifier
                 .size(50.dp)
@@ -81,7 +81,7 @@ fun ShimmerGridItem(brush: Brush = LoadingShimmerEffect()) {
         }
         Spacer(modifier = Modifier.height(15.dp))
         Spacer(modifier = Modifier
-            .height(2.dp)
+            .height(1.dp)
             .fillMaxWidth()
             .padding(start = 10.dp)
             .background(brush)

@@ -12,7 +12,7 @@ import com.core.model.data.StarRepos
 fun Repos(modifier: Modifier, repos: List<StarRepos>) {
     LazyColumn(modifier = modifier) {
         items(repos) {starRepo->
-            Repo(modifier = Modifier,starRepo)
+            ExpandableRepo(modifier = Modifier,starRepo)
         }
     }
 }
