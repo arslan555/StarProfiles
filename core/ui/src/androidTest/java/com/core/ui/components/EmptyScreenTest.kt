@@ -20,7 +20,7 @@ class EmptyScreenTest {
     val composeTestRule = createAndroidComposeRule<ComponentActivity>()
 
     @Test
-    fun emptyScreenTest() {
+    fun testEmptyScreen() {
         composeTestRule.setContent {
             EmptyScreen(onRetry = {})
         }
@@ -38,7 +38,7 @@ class EmptyScreenTest {
     }
 
     @Test
-    fun emptyScreenRetryButtonTest() {
+    fun testEmptyScreenRetryButton() {
         var retryClicked = false
 
         composeTestRule.setContent {
