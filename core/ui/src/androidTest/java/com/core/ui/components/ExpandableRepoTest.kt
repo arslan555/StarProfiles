@@ -17,7 +17,7 @@ class ExpandableRepoTest {
 
 
     @Test
-    fun expandableRepo_Expanded() {
+    fun testExpandableRepo_Expanded() {
         val starRepo = StarRepos(
             name = "Repo Name",
             fullName = "Repo Full Name",
@@ -46,7 +46,7 @@ class ExpandableRepoTest {
     }
 
     @Test
-    fun expandableRepo_Collapsed() {
+    fun testExpandableRepo_Collapsed() {
         val starRepo = StarRepos(
             name = "Repo Name",
             fullName = "Repo Full Name",
