@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -30,9 +31,20 @@ fun EmptyScreen(onRetry: () -> Unit) {
         horizontalAlignment = Alignment.CenterHorizontally
 
     ) {
-        item { LottieAnimation(composition, iterations = LottieConstants.IterateForever) }
+        item {
+            LottieAnimation(
+                composition,
+                iterations = LottieConstants.IterateForever,
+                modifier = Modifier.testTag("lottie_animation")
+            )
+        }
         item { Spacer(modifier = Modifier.height(10.dp)) }
-        item { Text(text = stringResource(id = R.string.no_data_available), style = MaterialTheme.typography.h5) }
+        item {
+            Text(
+                text = stringResource(id = R.string.no_data_available),
+                style = MaterialTheme.typography.h5
+            )
+        }
         item { Spacer(modifier = Modifier.height(60.dp)) }
         item {
             OutlinedButton(
