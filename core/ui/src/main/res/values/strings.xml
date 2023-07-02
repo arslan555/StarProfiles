@@ -4,4 +4,5 @@
     <string name="blocking_signal">An Alien is probably blocking your signal.</string>
     <string name="retry">RETRY</string>
     <string name="trending">Trending</string>
+    <string name="no_data_available">No Data Available, Please Try again later.</string>
 </resources>
