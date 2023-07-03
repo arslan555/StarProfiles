@@ -8,7 +8,8 @@ import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.TopAppBarDefaults
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
@@ -23,15 +24,16 @@ import com.core.ui.R
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SPTopAppBar(
+    defaultTheme: Boolean,
     @StringRes titleRes: Int,
     navigationIcon: ImageVector? = null,
     navigationIconContentDescription: String = "",
-    actionIcon: ImageVector = ImageVector.vectorResource(R.drawable.ic_moon),
     actionIconContentDescription: String = "",
     modifier: Modifier = Modifier,
     onNavigationClick: () -> Unit = {},
-    onActionClick: () -> Unit = {}
+    isDarkThemeEnabled: (Boolean) -> Unit = {}
 ) {
+    var darkThemeEnabled  by rememberSaveable { mutableStateOf(defaultTheme) }
     Surface(
         modifier = Modifier.fillMaxWidth(),
         elevation = 4.dp
@@ -58,9 +60,13 @@ fun SPTopAppBar(
                 }
             },
             actions = {
-                IconButton(onClick = onActionClick) {
+                IconButton(onClick = {
+                    darkThemeEnabled = darkThemeEnabled.not()
+                    isDarkThemeEnabled.invoke(darkThemeEnabled)
+
+                }) {
                     Icon(
-                        imageVector = actionIcon,
+                        imageVector = if (darkThemeEnabled) ImageVector.vectorResource(R.drawable.ic_day) else ImageVector.vectorResource(R.drawable.ic_moon),
                         contentDescription = actionIconContentDescription,
                         tint = MaterialTheme.colors.onSurface
                     )
@@ -77,7 +83,8 @@ fun SPTopAppBar(
 @Composable
 fun previewTopAppBar() {
     SPTopAppBar(
+        false,
         titleRes = R.string.trending,
-        actionIcon = Icons.Default.MoreVert,
+        navigationIcon = Icons.Default.MoreVert,
     )
 }
