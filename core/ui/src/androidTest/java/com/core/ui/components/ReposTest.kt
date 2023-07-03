@@ -46,7 +46,6 @@ class ReposTest {
         for (repo in repos) {
             repo.name?.let { composeTestRule.onNodeWithText(it).assertIsDisplayed() }
             repo.fullName?.let { composeTestRule.onNodeWithText(it).assertIsDisplayed() }
-            // Add additional assertions specific to each repository item
         }
     }
 }
