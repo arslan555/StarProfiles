@@ -38,6 +38,7 @@ dependencies {
     implementation project(path: ':core:network')
     implementation project(path: ':core:common')
     implementation project(path: ':core:testing')
+    implementation project(path: ':core:datastore')
 
     implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.0'
     implementation 'com.google.dagger:hilt-android:2.44'
