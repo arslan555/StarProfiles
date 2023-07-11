@@ -30,7 +30,7 @@
 <img src="preview/empty_dark.png" alt="drawing" width="250px" />
 </p>
 
-### 🧪 Test Cases 🧪
+## Test Cases 🧪
 
 #### 🔬 Unit Tests  (with code coverage) 🔬
 includes unit tests of Network module, data module( repository layer), common module, Feature module (ViewModels)
