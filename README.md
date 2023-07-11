@@ -7,16 +7,6 @@
 - Integrate Hilt for dependency injection and enhance code organization 🗝️
 - Utilize Coroutines and Flow for asynchronous programming and reactive data streams ⚡🌊
 - Follow Material Design guidelines to provide a visually appealing and user-friendly interface 🎨
-## Tech Stack & Open Source Libraries 🛠
-- [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) - Collection of libraries that help you design robust, testable, and maintainable apps.
-
-- 100% [Jetpack Compose](https://developer.android.com/jetpack/compose) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
-- Jetpack
-    - [Compose](https://developer.android.com/jetpack/compose): Android’s modern toolkit for building native UI.
-    - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel): UI related data holder and lifecycle aware.
-    - [Hilt](https://dagger.dev/hilt/): Dependency Injection.
-- [Retrofit2 & OkHttp3](https://github.com/square/retrofit): Construct the REST APIs and paging network data.
-- [viewmodel-lifecycle](https://github.com/skydoves/viewmodel-lifecycle): ViewModel Lifecycle allows you to track and observe Jetpack's ViewModel lifecycle changes.
 
 
 ## Previews 📷
@@ -65,6 +55,18 @@ includes unit tests of Network module, data module( repository layer), common mo
 
 <img src="preview/empty_screen_test.png" alt="drawing" /> 
 </p>
+
+
+## Tech Stack & Open Source Libraries 🛠
+- [Android Architecture Components](https://developer.android.com/topic/libraries/architecture) - Collection of libraries that help you design robust, testable, and maintainable apps.
+
+- 100% [Jetpack Compose](https://developer.android.com/jetpack/compose) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
+- Jetpack
+    - [Compose](https://developer.android.com/jetpack/compose): Android’s modern toolkit for building native UI.
+    - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel): UI related data holder and lifecycle aware.
+    - [Hilt](https://dagger.dev/hilt/): Dependency Injection.
+- [Retrofit2 & OkHttp3](https://github.com/square/retrofit): Construct the REST APIs and paging network data.
+- [viewmodel-lifecycle](https://github.com/skydoves/viewmodel-lifecycle): ViewModel Lifecycle allows you to track and observe Jetpack's ViewModel lifecycle changes.
 
 
 ## Architecture 🏛️
