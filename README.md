@@ -19,6 +19,53 @@
 - [viewmodel-lifecycle](https://github.com/skydoves/viewmodel-lifecycle): ViewModel Lifecycle allows you to track and observe Jetpack's ViewModel lifecycle changes.
 
 
+## Previews 📷
+
+### 🌞 Light Theme 🌞
+<p align="start">
+<img src="preview/loading_light.png" alt="drawing" width="250px" />
+<img src="preview/data_light.png" alt="drawing" width="250px" />
+<img src="preview/data_expended_light.png" alt="drawing" width="250px" />
+<img src="preview/network_light.png" alt="drawing" width="250px" />
+<img src="preview/empty_data_light.png" alt="drawing" width="250px" />
+</p>
+
+### 🌑 Dark Theme 🌑
+
+<p align="start">
+<img src="preview/loading_dark.png" alt="drawing" width="250px" />
+<img src="preview/data_dark.png" alt="drawing" width="250px" />
+<img src="preview/data_expanded_dark.png" alt="drawing" width="250px" />
+<img src="preview/network_dark.png" alt="drawing" width="250px" />
+<img src="preview/empty_dark.png" alt="drawing" width="250px" />
+</p>
+
+### 🧪 Test Cases 🧪
+
+#### 🔬 Unit Tests  (with code coverage) 🔬
+includes unit tests of Network module, data module( repository layer), common module, Feature module (ViewModels)
+<p align="start">
+<img src="preview/common0.png" alt="drawing" /> 
+
+<img src="preview/network0.png" alt="drawing" />
+
+<img src="preview/data0.png" alt="drawing"  /> 
+
+<img src="preview/data1.png" alt="drawing" />
+
+<img src="preview/trendingvm.png" alt="drawing" /> 
+
+#### 📱 UI Tests 📱
+
+<img src="preview/repos_test.png" alt="drawing"/>
+
+<img src="preview/Expandable_repo_test.png" alt="drawing" /> 
+
+<img src="preview/error_screen_test.png" alt="drawing"  /> 
+
+<img src="preview/empty_screen_test.png" alt="drawing" /> 
+</p>
+
 
 ## Architecture 🏛️
 This app has been fully modularized.
@@ -139,61 +186,12 @@ apps, across different platforms, from the same foundation.
 
 
 
-## Previews 📷
-
-### 🌞 Light Theme 🌞
-<p align="start">
-<img src="preview/loading_light.png" alt="drawing" width="250px" />
-<img src="preview/data_light.png" alt="drawing" width="250px" />
-<img src="preview/data_expended_light.png" alt="drawing" width="250px" />
-<img src="preview/network_light.png" alt="drawing" width="250px" />
-<img src="preview/empty_data_light.png" alt="drawing" width="250px" />
-</p>
-
-### 🌑 Dark Theme 🌑
-
-<p align="start">
-<img src="preview/loading_dark.png" alt="drawing" width="250px" />
-<img src="preview/data_dark.png" alt="drawing" width="250px" />
-<img src="preview/data_expanded_dark.png" alt="drawing" width="250px" />
-<img src="preview/network_dark.png" alt="drawing" width="250px" />
-<img src="preview/empty_dark.png" alt="drawing" width="250px" />
-</p>
-
-### 🧪 Test Cases 🧪
-
-#### 🔬 Unit Tests  (with code coverage) 🔬
-includes unit tests of Network module, data module( repository layer), common module, Feature module (ViewModels)
-<p align="start">
-<img src="preview/common0.png" alt="drawing" /> 
-
-<img src="preview/network0.png" alt="drawing" />
-
-<img src="preview/data0.png" alt="drawing"  /> 
-
-<img src="preview/data1.png" alt="drawing" />
-
-<img src="preview/trendingvm.png" alt="drawing" /> 
-
-#### 📱 UI Tests 📱
-
-<img src="preview/repos_test.png" alt="drawing"/>
-
-<img src="preview/Expandable_repo_test.png" alt="drawing" /> 
-
-<img src="preview/error_screen_test.png" alt="drawing"  /> 
-
-<img src="preview/empty_screen_test.png" alt="drawing" /> 
-</p>
-
-
-
 ## Developed by 👨‍💻
 
 <a href="https://www.linkedin.com/in/mirza-arslan/" target="_blank">
 </a>
 
-**Muhammad Arslan**
+**Mirza Arslan**
 
 [![Medium](https://img.shields.io/badge/-medium-grey?logo=medium)](https://medium.com/@mirzaarslan450)
 [![Linkedin](https://img.shields.io/badge/-linkedin-grey?logo=linkedin)](https://www.linkedin.com/in/mirza-arslan/)
