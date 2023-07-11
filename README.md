@@ -1,19 +1,7 @@
 # GituhbStarRepos App ✨📱🚀
 
-
-
-## Goals and Requirements 🎯✅
-- Develop an Android application using Kotlin 📱🚀
-- Support minimum API level 21 (Lollipop) 📱🔧
-- Utilize Git for version control to track code history and development 🗂️🔀
-- Fetch trending repositories from a provided public API and display them to users 🌟🔍📊
-- Implement shimmer animation on table cells while fetching data to provide a visually pleasing loading experience ✨⏳
-- Support dark mode to enhance user customization and accessibility 🌗🌙
-
-
-
 ## Overview 🌟📱🧪🔧🚀
-- Developed an Android application for exploring and viewing starred github repositories 📱🌟✨
+- Application for exploring and viewing starred github repositories 📱🌟✨
 - Implement a test-driven development (TDD) approach to ensure high code quality and reliability 🧪📝
 - Utilize a multi-module architecture to achieve modularity and maintainability 🧩
 - Integrate Hilt for dependency injection and enhance code organization 🗝️
