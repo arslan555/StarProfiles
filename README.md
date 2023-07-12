@@ -1,7 +1,7 @@
 # GituhbStarRepos App ✨📱🚀
 
 ## Overview 🌟📱🧪🔧🚀
-- Application for exploring and viewing starred github repositories 📱🌟✨
+- Application for viewing starred github repositories 📱🌟✨
 - Implement a test-driven development (TDD) approach to ensure high code quality and reliability 🧪📝
 - Utilize a multi-module architecture to achieve modularity and maintainability 🧩
 - Integrate Hilt for dependency injection and enhance code organization 🗝️
